@@ -1,0 +1,16 @@
+{
+  "name": "twitchchatbot",
+  "version": "1.0.0",
+  "description": "Twitch Chat bot using tmi.js",
+  "main": "chat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marko V",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2",
+    "tmi.js": "^1.5.0"
+  }
+}
