@@ -23,9 +23,9 @@ class TriggerModel {
         if(message.toLowerCase().indexOf(this.messageToMatch.toLowerCase()) === -1) return false;
         return true;
     }
-    enact(tmiTwichClient, channel, message) {
-        if(this.sendCommand !== "") tmiTwichClient.say(channel, this.sendCommand);
-        if(this.callback !== null) this.callback(message);
+    enact(tmiTwitchClient, channel, message) {
+        if(this.isNun(tmiTwitchClient) && this.sendCommand !== "") tmiTwitchClient.say(channel, this.sendCommand);
+        if(this.callback !== null && message !== "") this.callback(this, message);
     }
 }
 module.exports = TriggerModel;
