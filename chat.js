@@ -74,7 +74,7 @@ if(useRavenfall && r !== null) {
     triggerArray.push(new TriggerModel({
         messageToMatch: "!itemdata",
         channel: "#mrBalrog",
-        callback: (msg) => {
+        callback: (model, msg) => {
             let args = msg.substring("!itemdata".length).trim();
             r.GetItems().then((result) => {
                 var item = result.data.find(i=>i.name.toLowerCase() === args.toLowerCase());
